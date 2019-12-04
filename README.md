@@ -1,85 +1,105 @@
 ShadowsocksR
 ===========
 
-帮助您绕过防火墙的快速隧道代理.
+[![Build Status]][Travis CI]
 
-服务端
+A fast tunnel proxy that helps you bypass firewalls.
+
+Server
 ------
 
-### 安装
+### Install
 
 Debian / Ubuntu:
 
     apt-get install git
-    git clone https://github.com/wavelet-xb/shadowsocksr.git
+    git clone https://github.com/shadowsocksr/shadowsocksr.git
 
 CentOS:
 
     yum install git
-    git clone https://github.com/wavelet-xb/shadowsocksr.git
+    git clone https://github.com/shadowsocksr/shadowsocksr.git
 
 Windows:
 
-    git clone https://github.com/wavelet-xb/shadowsocksr.git
+    git clone https://github.com/shadowsocksr/shadowsocksr.git
 
-### linux平台上的单用户使用
+### Usage for single user on linux platform
 
-如果你把它克隆到 "~/shadowsocksr"  
-移动到 "~/shadowsocksr", 然后运行:
+If you clone it into "~/shadowsocksr"  
+move to "~/shadowsocksr", then run:
 
     bash initcfg.sh
 
-移动到 "~/shadowsocksr/shadowsocks", 然后运行:
+move to "~/shadowsocksr/shadowsocks", then run:
 
     python server.py -p 443 -k password -m aes-128-cfb -O auth_aes128_md5 -o tls1.2_ticket_auth_compatible
 
-通过检查所有选项 `-h`.
+Check all the options via `-h`.
 
-也可以改用配置文件（推荐）, 移动到 "~/shadowsocksr" 然后编辑文件 "user-config.json", 然后转到 "~/shadowsocksr/shadowsocks" 再来一次, 就跑:
+You can also use a configuration file instead (recommend), move to "~/shadowsocksr" and edit the file "user-config.json", then move to "~/shadowsocksr/shadowsocks" again, just run:
 
     python server.py
 
-在后台运行:
+To run in the background:
 
     ./logrun.sh
 
-停止:
+To stop:
 
     ./stop.sh
 
-监视日志:
+To monitor the log:
 
     ./tail.sh
 
 
-客服端
+Client
 ------
 
 * [Windows] / [macOS]
 * [Android] / [iOS]
 * [OpenWRT]
 
-在本地PC/手机上使用GUI客户端.查看客户的自述文件
-更多信息.
+Use GUI clients on your local PC/phones. Check the README of your client
+for more information.
 
-文档
+Documentation
 -------------
 
-您可以在[Wiki]中找到所有文档.
+You can find all the documentation in the [Wiki].
 
-许可证
+License
 -------
 
-版权所有2015 clowwindy
+Copyright 2015 clowwindy
 
-根据Apache许可证2.0版（以下简称“许可证”）授权；您可以
-除非符合许可证, 否则不要使用此文件.你可以获得
-许可证副本
+Licensed under the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License. You may obtain
+a copy of the License at
 
     http://www.apache.org/licenses/LICENSE-2.0
 
-除非适用法律要求或书面同意, 否则软件
-根据许可证分发的是按"原样"分发的, 而不是
-明示或默示的任何形式的保证或条件.见
-管理权限和限制的特定语言的许可证
-在许可证下.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.
+
+Bugs and Issues
+----------------
+
+* [Issue Tracker]
+
+
+
+[Android]:           https://github.com/shadowsocksr/shadowsocksr-android
+[Build Status]:      https://travis-ci.org/shadowsocksr/shadowsocksr.svg?branch=manyuser
+[Debian sid]:        https://packages.debian.org/unstable/python/shadowsocks
+[iOS]:               https://github.com/shadowsocks/shadowsocks-iOS/wiki/Help
+[Issue Tracker]:     https://github.com/shadowsocksr/shadowsocksr/issues?state=open
+[OpenWRT]:           https://github.com/shadowsocks/openwrt-shadowsocks
+[macOS]:             https://github.com/shadowsocksr/ShadowsocksX-NG
+[Travis CI]:         https://travis-ci.org/shadowsocksr/shadowsocksr
+[Windows]:           https://github.com/shadowsocksr/shadowsocksr-csharp
+[Wiki]:              https://github.com/breakwa11/shadowsocks-rss/wiki
